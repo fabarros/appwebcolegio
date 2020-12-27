@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: nuevaclave123
+  pool: 5
+
+production:
+  <<: *default
+  database: appwebcolegio_production
+
+development:
+  <<: *default
+  database: appwebcolegio_development
+
+test:
+  <<: *default
+  database: appwebcolegio_test
